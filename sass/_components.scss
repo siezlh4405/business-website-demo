@@ -1,0 +1,138 @@
+// nav ****************************************
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: $nav-height;
+    padding: 0 3rem;
+    background-color: $main-color-dark;
+    z-index: 100;
+
+    &__logo {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: $color-white;
+    }
+}
+
+// main-content ****************************************
+.main-content {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - #{$nav-height});
+    min-height: calc(80rem - #{$nav-height});
+    margin-top: $nav-height;
+    background-color: $main-color-light;
+    
+    &__heading {
+        position: absolute;
+        top: 18rem;
+        left: 10rem;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 40rem;
+        left: 25rem;
+    }
+}
+
+
+// method-content ****************************************
+.method-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 5rem 2rem 5rem;
+    background-color: $color-white;
+
+    &__infomation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 3rem;
+    }
+
+    &__item {
+        flex: 0 0 30%;
+        height: 32rem;
+        margin: 0 10rem 2.4rem 10rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 3.4rem;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__icon-box {
+        width: 100%;
+        height: 16rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}
+
+
+// heading ****************************************
+.heading-first {
+    text-transform: uppercase;
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+    font-weight: 900;
+    
+    &__text {
+        font-size: inherit;
+        word-spacing: .8rem;
+        
+        &_sub {
+            padding-left: 5rem;
+            margin-top: -1rem;
+            font-size: 3.2rem;
+            font-style: italic;
+            letter-spacing: 1rem;
+        }
+    }
+}
+
+.heading-secondary {
+    text-transform: uppercase;
+    font-size: 5.4rem;
+    line-height: 7.2rem;
+    font-weight: 700;
+}
+
+
+// button ****************************************
+.main-btn {
+    width: 30rem;
+    height: 6rem;
+    border-radius: 5rem;
+    border: 5px solid $main-color-dark;
+    outline: none;
+    font-size: 3rem;
+    font-weight: 400;
+    color: $color-white;
+    background-color: $main-color-dark;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        box-shadow: 0 0 1px 6px $main-color-dark;
+    }
+}
