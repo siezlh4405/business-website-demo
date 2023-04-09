@@ -84,6 +84,36 @@ body {
     margin-bottom: 1.5rem;
     text-align: center; }
 
+.method-pricing {
+  width: 100%;
+  height: 100rem;
+  background: linear-gradient(to bottom, #47c6ec 50%, #fff 50%); }
+  .method-pricing__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem; }
+  .method-pricing__info-text {
+    width: 30%;
+    min-width: 30rem;
+    text-align: center; }
+  .method-pricing__infomation {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+
+.pricing-card {
+  width: 35rem;
+  height: 55rem;
+  margin: 12rem 1rem 0 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  transition: all .3s; }
+  .pricing-card:hover {
+    margin-top: 9rem;
+    box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5); }
+
 .heading-first {
   text-transform: uppercase;
   font-size: 7.2rem;
