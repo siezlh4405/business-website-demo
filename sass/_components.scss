@@ -24,6 +24,10 @@
     margin-top: $nav-height;
     background-color: $main-color-light;
 
+    @include respond(phone) {
+        padding: 0 2rem;
+    }
+
     &__heading {
         position: absolute;
         top: 18rem;
@@ -31,6 +35,11 @@
 
         @include respond(tablet) {
             top: 14rem;
+        }
+
+        @include respond(phone) {
+            top: 8rem;
+            left: 6rem;
         }
     }
 
@@ -46,6 +55,12 @@
 
         @include respond(tablet) {
             top: 35rem;
+        }
+
+        @include respond(phone) {
+            top: 30rem;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
@@ -67,12 +82,26 @@
         align-items: center;
         width: 80%;
         padding: 5rem 3rem 3rem 3rem;
+
+        @include respond(tablet) {
+            width: 100%;
+        }
     }
 
     &__item {
         flex: 0 0 50%;
         min-height: 32rem;
         padding: 0 7.25% 5rem 7.25%;
+
+        @include respond(tablet) {
+            padding: 0 6% 5rem 6%;
+        }
+
+        @include respond(tablet) {
+            flex: 0 0 100%;
+            padding: 0 5% 5rem 5%;
+            min-height: 0;
+        }
     }
 
     &__title {
@@ -198,6 +227,10 @@
         }
     }
 
+    @include respond(phone) {
+        min-height: 48rem;
+    }
+
     &:hover {
         margin-top: -12rem;
         box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5);
@@ -216,6 +249,11 @@
 
         @include respond(laptop) {
             font-size: 4rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 3rem;
+            font-size: 3rem;
         }
     }
 
@@ -318,6 +356,10 @@
         }
     }
 
+    @include respond(phone) {
+        width: fit-content;
+    }
+
     &__img-box {
         display: flex;
         justify-content: center;
@@ -408,16 +450,15 @@
 
 // footer ****************************************
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     padding-top: 5rem;
     background-color: $color-grey;
 
     &__location {
         display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 3rem;
     }
 
     &__copy-right {
@@ -429,20 +470,25 @@
     }
 
     &__logo {
-        flex: 0 0 20rem;
+        margin-right: 8%;
 
         @include respond(laptop) {
-            flex: 0 0 15rem;
+            margin-right: 5rem;
         }
     }
 
     &__link-item {
         display: flex;
-        flex: 1;
+        flex-wrap: wrap;
     }
 
     &__link-group {
         min-width: 20rem;
+        margin-bottom: 3rem;
+
+        @include respond(laptop) {
+            min-width: 12rem;
+        }
     }
 
     &__link-type {
@@ -488,6 +534,11 @@
         font-size: 5rem;
         line-height: 5rem;
     }
+
+    @include respond(phone) {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
     
     &__text {
         font-size: inherit;
@@ -509,11 +560,19 @@
             @include respond(tablet) {
                 font-size: 2.4rem;
             }
+
+            @include respond(phone) {
+                margin-top: 2rem;
+                font-size: 2rem;
+                line-height: 2rem;
+                letter-spacing: 0;
+            }
         }
     }
 }
 
 .heading-secondary {
+    text-align: center;
     text-transform: uppercase;
     font-size: 5.4rem;
     line-height: 5.4rem;
@@ -522,6 +581,11 @@
     @include respond(laptop) {
         font-size: 4.4rem;
         line-height: 4.4rem;
+    }
+
+    @include respond(phone) {
+        font-size: 3.4rem;
+        line-height: 3.4rem;
     }
 }
 
@@ -550,6 +614,11 @@
 
     &:hover {
         box-shadow: 0 0 1px 6px $main-color-dark;
+    }
+
+    @include respond(phone) {
+        width: 24rem;
+        font-size: 2.4rem;
     }
 }
 
